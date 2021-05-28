@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<h1 style="text-align: center;">Write a new Article</h1>
+<form>
+<div class="article-form">
+    <input type="text" class="input-box" placeholder="&nbsp;&nbsp;Title">
+    <br><br>
+    <input type="text" class="input-box" placeholder="&nbsp;&nbsp;Highlight">
+    <br><br>
+    <input type="text" class="input-box" placeholder="&nbsp;&nbsp;Date of article" onfocus="(this.type='date')">
+    <br><br>
+    <textarea placeholder="&nbsp;&nbsp;Discribe here..." class="input-area" cols="30" rows="5"></textarea>
+    <br>
+    
+</div>
+<div class="article-image">
+    <div class="form-input">
+        <label for="file-ip-1">
+          <img id="file-ip-1-preview" src="https://i.ibb.co/ZVFsg37/default.png">
+        </label>
+        <input type="file"  name="img_one" id="file-ip-1" accept="image/*" (change)="showPreviewOne($event);">
+      </div>
+      <br>
+    <button class="btn btn-primary align-self-center"  type="submit">Submit for review</button>
+</div>
+</form>
+
+

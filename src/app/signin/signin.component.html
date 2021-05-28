@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div *ngIf="signin" class="cards">
+    <br><br>
+    <h1>Login Here</h1>
+    <h3 style="text-align: center;color: rgb(112, 110, 110)">Enter credentials</h3><br>
+    <form [formGroup]="LoginForm" novalidate>
+        <br>
+        <input  [class.is-invalid]="LoginForm.controls['email'].invalid && LoginForm.controls['email'].touched" formControlName="email" type="email" class="in" placeholder="Email" name="email">
+        <small class="error" *ngIf="!(LoginForm.controls['email'].valid || LoginForm.controls['email'].untouched)"><p>Please fill out this field!</p></small>
+        <br>
+        <br>
+        {{LoginForm.controls['email'].value}}
+        <input [class.is-invalid]="LoginForm.controls['password'].invalid && LoginForm.controls['password'].touched" formControlName="password" type="password" class="in" placeholder="Password">
+        <small class="error" *ngIf="!(LoginForm.controls['password'].valid || LoginForm.controls['password'].untouched)"><p>Please fill out this field!</p></small>
+        <br><br>
+        <input  type="checkbox"><label> remember me</label>
+        <br><br><br>
+        <button class="btn btn-primary align-self-center" type="submit" routerLink = "/profile">Login</button>
+    </form>
+    <br>
+    <h4> <span class="fp">Forget password ?</span><span class="fp" (click)="signin=!signin">Create account</span></h4>
+  </div>
+  
+  
+  <div *ngIf="!signin" class="cards">
+    <br><br>
+    <h1>Create Account</h1>
+    <h3 style="text-align: center;color: rgb(112, 110, 110)">Enter credentials</h3><br>
+    <form [formGroup]="RegistrationForm" novalidate style="align-self: center;" method="POST" (ngSubmit)="onsubmit()">
+        <br>
+        <input  formControlName="fname" type="text" class="in" placeholder="First Name">
+        <br><br>
+        <input formControlName="lname" type="text" class="in" placeholder="Last Name">
+        <br><br>
+        <input [class.is-invalid]="RegistrationForm.controls['email'].invalid && RegistrationForm.controls['email'].touched" formControlName="email" type="email" class="in" placeholder="Email">
+        <small class="error" *ngIf="!(RegistrationForm.controls['email'].valid || RegistrationForm.controls['email'].untouched)"><p>Please fill out this field!</p></small>
+        <br>
+        <br>
+        <input [class.is-invalid]="RegistrationForm.controls['password'].invalid && RegistrationForm.controls['password'].touched" formControlName="password" type="password" class="in" placeholder="Password">
+        <small class="error" *ngIf="!(RegistrationForm.controls['password'].valid || RegistrationForm.controls['password'].untouched)"><p>Please fill out this field!</p></small>
+        <br><br>
+        <input formControlName="cpassword" type="password" class="in" placeholder="Confirm Password">
+        <!--<small style="color: red;margin-left:10%;" *ngIf="">Passwords do not match</small>-->
+        <br><br><br>
+        <button  class="btn btn-primary align-self-center" type="submit" style="align-self: center;">Sign Up</button>
+    </form>
+    <br>
+    <div>
+    <h3 class="fp2">Already have an account?<small (click)="signin=!signin" class="backtologin">Login</small></h3>
+    </div>
+  </div>

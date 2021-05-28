@@ -1,0 +1,55 @@
+
+.user-opt {
+  /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+  transition: 0.2s;
+  border-radius: 10px;
+  width: 400px;
+  border: 3px solid #f1f1f1;
+  position:relative;
+  float: left;
+  text-align: center;
+  background-color: whitesmoke;
+  height: 110%;
+  
+}
+.panel-details{
+  border-radius: 10px;
+    width: 1110px;
+    height: 605px;
+    background-color: whitesmoke;
+    position:relative;
+    float: right;
+}
+.fa-user-circle{
+    font-size: 164px;
+    color: #33cc33;
+}
+
+  .pic-line{
+    color: grey;
+    cursor: pointer;
+  }
+  .pic-line:hover{
+    color: black;
+    cursor: pointer;
+  }
+  .useroptions {
+    /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+    transition: 0.3s;
+    /*background-color: white;*/
+    text-align: center;
+    height: 50px;
+    margin-top: -10px;
+  }
+ 
+  .user-optn-btn:hover, .active {
+    background-color:white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    
+  }
+  .user-optn-btn{
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: whitesmoke;
+  }

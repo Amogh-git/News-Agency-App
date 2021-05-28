@@ -1,0 +1,27 @@
+<div class="user-opt">
+    <br>
+    <i class='fas fa-user-circle'></i>
+    <h3>Username</h3>
+    <div class="pic-line">
+        <i class="fa fa-camera"></i><span>&nbsp;&nbsp;&nbsp;change profile picture</span>
+    </div>
+    <hr>
+    <button (click)="setFlag(1)" [ngClass]="{'active': flag===1}" class="user-optn-btn"><h5><i class="fa fa-newspaper-o"></i>&nbsp;&nbsp;&nbsp;My Articles</h5></button>
+    <button (click)="setFlag(2)" [ngClass]="{'active': flag===2}" class="user-optn-btn"><h5><i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;Contribute</h5></button>
+    <button (click)="setFlag(3)" [ngClass]="{'active': flag===3}" class="user-optn-btn"><h5><i class="fa fa-edit"></i>&nbsp;&nbsp;&nbsp;Edit Profile</h5></button>
+    <button (click)="setFlag(4)" [ngClass]="{'active': flag===4}" class="user-optn-btn"><h5><i class="fa fa-gear"></i>&nbsp;&nbsp;&nbsp;Account setting</h5></button>
+    <button (click)="setFlag(5)" [ngClass]="{'active': flag===5}" class="user-optn-btn"><h5><i class="fa fa-tasks"></i>&nbsp;&nbsp;&nbsp;Articles under review</h5></button>
+    <button routerLink = "/usersignin" class="user-optn-btn"><h5><i class="fa fa-sign-out"></i>&nbsp;&nbsp;&nbsp;Log out</h5></button>
+</div>
+<div class="panel-details">
+    <div *ngIf="flag===1">
+        <app-myarticles></app-myarticles>
+    </div>
+    <div *ngIf="flag===2">
+        <app-contribute></app-contribute>
+    </div> 
+    <div *ngIf="flag===3">
+        <app-edit></app-edit>
+    </div> 
+</div>
+    

@@ -1,0 +1,38 @@
+
+.input-box{
+    width: 60%;height: 40px;
+    border: 0;
+    color: white;
+    border-radius: 30px;
+    outline: 0;
+    background-color: rgb(10, 10, 10);
+  }
+.input-area{
+    width: 80%;
+    border: 0;
+    color: white;
+    max-height: 300px;
+    border-radius: 20px;
+    outline: 0;
+    background-color: rgb(10, 10, 10);
+}
+.username-form{
+    margin-top: 100px;
+    width: 50%;
+    text-align: center;
+    float: left;
+    border-right: 2px solid grey;
+}
+  button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    
+  }
