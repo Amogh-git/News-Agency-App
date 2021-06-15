@@ -13,7 +13,7 @@ temp:NewsModel = new NewsModel;
 
 
 gaurApiKey = "bd636a5e-6518-4e03-a4d9-16661af68960";
-gaurUrl = "http://content.guardianapis.com/search?show-fields=all&page-size=20&api-key=";
+gaurUrl = "https://content.guardianapis.com/search?show-fields=all&page-size=20&api-key=";
 gaurSectionUrl = "https://content.guardianapis.com/search?show-fields=all&page-size=20&q="
 
 
