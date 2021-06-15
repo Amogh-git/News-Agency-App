@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  flag = 2;
+  flag = 1;
   constructor() { }
 
   ngOnInit(): void {
